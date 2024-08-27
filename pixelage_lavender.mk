@@ -27,6 +27,9 @@ $(call inherit-product, device/xiaomi/lavender/device.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+WITH_GMS := true
+
 # Device identifier
 PRODUCT_NAME := pixelage_lavender
 PRODUCT_MANUFACTURER := Xiaomi
